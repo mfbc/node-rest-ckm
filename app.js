@@ -2,9 +2,12 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
-const archetypeRoutes = require('./api/routes/archetype');
+const archetypeRoutes = require('./api/routes/archetypes');
 //const LoQueSea = require('./api/routes/LoQueSea');
+
+mongoose.connect('mongodb+srv://admin-ckm:6U0MlC6ahO0EzaqX@ckm-gnsp6.mongodb.net/test?retryWrites=true&w=majority', { useUnifiedTopology: true, useNewUrlParser: true });
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
