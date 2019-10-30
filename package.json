@@ -1,0 +1,14 @@
+{
+  "name": "rest-ckm",
+  "version": "1.0.0",
+  "description": "RESTful API acciones y manejo de datos de arquetipos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matias Bahamonde",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
