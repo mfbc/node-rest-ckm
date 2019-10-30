@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res, next) =>{
-    res.setHeader('Access-Control-Allow-Origin', '*');
     res.status(200).json({
     "success":true,
     "data": {
@@ -13,13 +12,17 @@ router.get('/', (req, res, next) =>{
 });
 
 router.post('/', (req, res, next) =>{
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.status(200).json({
+    const arch = {
+        name: req.body.name,
+        data: req.body.data
+    }
+    res.status(201).json({
     "success":true,
     "data": {
         "code": "SUCCESS",
-        "message": "Los wa matar"
-            }
+        "message": "mentira"
+    },
+    "archetype": arch
     });
 });
 
