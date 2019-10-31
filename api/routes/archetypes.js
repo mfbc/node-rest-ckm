@@ -40,7 +40,6 @@ router.get('/:id', (req, res, next) =>{
 router.post('/', (req, res, next) =>{
     const archetype = new Archetype({
         _id: new mongoose.Types.ObjectId(),
-        title: req.body.title,
         data: req.body.data
     });
 
